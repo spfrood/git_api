@@ -7,7 +7,7 @@ import sys
 # Set up to insert new record if no id exists for the profile, otherwilse 
 # modify existing profile with same id.
 
-def add_customer(prof_dict): 
+def add_prof_to_sql(prof_dict): 
   # Set up the mysql query to perform an insert
   query_base = 'INSERT INTO gitprofiles ('
   # Set up the vales portion of query

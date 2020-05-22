@@ -2,7 +2,8 @@ import json
 import github_query
 import g_prof_insert
 
-# Need to import the sql functions as well
+# Need to import the sql functions
+# and the urllib functions that will get the profile data from the github site
 
 
 def main():
@@ -15,8 +16,10 @@ def main():
 #  for k, v in prof_dict.items():
 #    print (str(k) + ' : ' + str(v))
 
+  # Run the function that will add the data from the profile to the mysql database
+  # Function was imported from the g_prof_insert.py file
   print ("calling g_prof_insert.add_profile()")
-  g_prof_insert.add_customer(prof_dict)
+  g_prof_insert.add_prof_to_sql(prof_dict)
 
 
 if __name__ == '__main__':
